@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omkar Mulge - Portfolio</title>
+
+    <link rel="icon" href="favicon.png" type="image/png" sizes="32x32" />
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <input type="checkbox" id="sidebar-active" />
+      <label for="sidebar-active" class="open-sidebar-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="32"
+          viewBox="0 -960 960 960"
+          width="32"
+        >
+          <path
+            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+          />
+        </svg>
+      </label>
+      <label id="overlay" for="sidebar-active"></label>
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32"
+            viewBox="0 -960 960 960"
+            width="32"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </label>
+
+        <div class="logo-container">
+          <h1 class="logo">Omkar's Portfolio</h1>
+        </div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+      <div class="container">
+        <div class="home-content">
+          <h2>Hi, I'm Omkar Mulge</h2>
+          <p>
+            Computer Science & Engineering Student | Aspiring Software Engineer
+          </p>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="https://github.com/mulgeomkar" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/omkarmulge/" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://leetcode.com/u/omkarmulge/" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                alt="LeetCode"
+                class="leetcode-icon"
+              />
+            </a>
+          </div>
+
+          <!-- Resume Button -->
+          <a href="Omkar_Resume.pdf" download class="resume-button"
+            >Download Resume</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate Computer Science and Engineering student
+          specializing in Data Science at ACE Engineering College, Hyderabad. I
+          have a strong interest in web development, cloud security, and
+          problem-solving. I enjoy building interactive and user-friendly
+          applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+      <div class="container">
+        <h2>Education</h2>
+
+        <div class="education-item">
+          <h3>B.Tech in Computer Science and Engineering (Data Science)</h3>
+          <p>ACE Engineering College, Hyderabad | 2022-2026 | CGPA: 7.65</p>
+        </div>
+
+        <div class="education-item">
+          <h3>Intermediate - Telangana Board of Intermediate Education</h3>
+          <p>
+            Nalla Malla Reddy Junior College, Hyderabad | 2020-2022 | CGPA: 8.04
+          </p>
+        </div>
+
+        <div class="education-item">
+          <h3>SSC - Telangana Board of Secondary Education</h3>
+          <p>MJPTSBCWR School Doulthabad | 2019-2020 | CGPA: 10</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-list">
+          <div class="skill-item">
+            <h3>Languages</h3>
+            <p>C, Python, Java, JavaScript, HTML, CSS</p>
+          </div>
+          <div class="skill-item">
+            <h3>Web Development Tools</h3>
+            <p>Node.js, VS Code, Git, GitHub</p>
+          </div>
+          <div class="skill-item">
+            <h3>Frameworks</h3>
+            <p>ReactJS</p>
+          </div>
+          <div class="skill-item">
+            <h3>Cloud/Databases</h3>
+            <p>MongoDB, MySQL, AWS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="project-item">
+          <h3>Job Board– AWS Serverless Application</h3>
+          <p>
+            Users can post job listings, view available jobs, and manage them through a fully functional API.
+            <br/> Implemented CRUD operations with DynamoDB and used S3 to serve static frontend assets.
+          </p>
+          <p>
+            <strong>Technologies:</strong> AWS Lambda, API Gateway, DynamoDB, S3, Serverless Framework, JavaScript.
+          </p>
+          <a
+            href="https://github.com/mulgeomkar/job-board"
+            target="_blank"
+            class="project-link"
+            >View Project</a
+          >
+        </div>
+
+        <div class="project-item">
+          <h3>Air Canvas (Virtual painting)</h3>
+          <p>
+            Developed a virtual drawing application that allows users to draw on the screen using hand gestures.
+            <br/>Implemented computer vision techniques using OpenCV to track hand movements and detect gestures
+          </p>
+          <p><strong>Technologies:</strong> Python, OpenCV, NumPy, MediaPipe, Computer Vision.</p>
+          <a
+            href="https://github.com/mulgeomkar/Air-canvas"
+            target="_blank"
+            class="project-link"
+            >View Project</a>
+        </div>
+
+        <div class="project-item">
+          <h3>Calculator Application (Java, Swing GUI)</h3>
+          <p>
+            Interactive calculator with arithmetic functions, decimal support,
+            and responsive UI.
+          </p>
+          <p><strong>Technologies:</strong> Java, Swing</p>
+          <a
+            href="https://github.com/mulgeomkar/Calculator"
+            target="_blank"
+            class="project-link"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+      <div class="container">
+        <h2>Certifications</h2>
+        <div class="certifications-grid">
+          <!-- Credly Badges -->
+          <div
+            data-iframe-width="150"
+            data-iframe-height="270"
+            data-share-badge-id="da0b3da6-e14c-4fc9-bbe7-b70d9d632508"
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+          <div
+            data-iframe-width="150"
+            data-iframe-height="270"
+            data-share-badge-id="d4259d51-fc71-4113-8440-a5d32b647176"
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+          <div
+            data-iframe-width="150"
+            data-iframe-height="270"
+            data-share-badge-id="109bb6c6-f4ea-43c7-ba50-a3868f9ac0ab"
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+          <div
+            data-iframe-width="150"
+            data-iframe-height="270"
+            data-share-badge-id="0434fef0-7183-4c9a-81e7-0f04b6fd5fe0"
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+          <div
+            data-iframe-width="150"
+            data-iframe-height="270"
+            data-share-badge-id="cd7bcaf2-0e74-453b-89d0-9e122f7e9fdb"
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+          <div
+            data-iframe-width="150"
+            data-iframe-height="270"
+            data-share-badge-id="4cce43db-8a31-4859-982a-f83a5ca90b34"
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+          <div
+            data-iframe-width="150"
+            data-iframe-height="270"
+            data-share-badge-id="23bf2a6a-6b20-4d83-bbc8-eaf8bac3f948"
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+          <div
+            data-iframe-width="150"
+            data-iframe-height="270"
+            data-share-badge-id="5e9691c9-4128-423d-824e-8c825766ec3d"
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+          <div
+            data-iframe-width="150"
+            data-iframe-height="270"
+            data-share-badge-id="b2af40f8-ae5c-4cc6-a217-f46499caeab3"
+            data-share-badge-host="https://www.credly.com"
+          ></div>
+        </div>
+        <script
+          type="text/javascript"
+          async
+          src="//cdn.credly.com/assets/utilities/embed.js"
+        ></script>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          Feel free to reach out to me for any opportunities or collaborations!
+        </p>
+        <div class="contact-info">
+          <p>
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <a href="tel:+91-7019771927">+91-7019771927</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:mulgeomkar666@gmail.com" rel="noopener noreferrer"
+              >mulgeomkar666@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Omkar Mulge. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>

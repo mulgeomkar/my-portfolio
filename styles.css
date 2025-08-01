@@ -1,0 +1,558 @@
+/* General Styles */
+body {
+    font-family: "Bricolage Grotesque", serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: hsl(0, 2%, 10%);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+
+
+h1.logo {
+    color: #fffbfb; /* Coral color */
+    font-size: 52px; /* Bigger font size */
+    font-weight: 5000;
+    margin: 0;
+    position: absolute;
+    
+}
+
+h2, h3 {
+    color: hsl(0, 0%, 1%);
+}
+
+a {
+    text-decoration: none;
+    color: #141313;
+}
+
+/* Navigation Bar */
+/* Navigation Bar */
+nav {
+  height: 60px;
+  background-color: var(--color-1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+}
+
+.logo-container {
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+nav svg {
+  fill: var(--text-color);
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+  display: none;
+}
+
+/* Mobile View Styles */
+@media (max-width: 768px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--color-1);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+
+  .open-sidebar-button, .close-sidebar-button {
+    padding: 20px;
+    display: block;
+    cursor: pointer;
+  }
+
+  .close-sidebar-button {
+    align-self: flex-end;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .logo-container {
+    display: none;
+  }
+}
+
+/* Update your existing logo styles */
+h1.logo {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+}
+/* Home Section */
+.home {
+    background: #f4f4f4;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.home h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 18px;
+    color: hsl(0, 2%, 10%);
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #0a0a0a;
+}
+
+
+.social-links a i {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+  display: inline-block; 
+}
+
+.social-links a:hover i {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+
+
+.leetcode-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 10px;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.leetcode-icon:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+
+
+/* About Section */
+.about {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.about p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Education Section */
+.education {
+    padding: 60px 0;
+    background: #f4f4f4;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    margin-bottom: 5px;
+}
+
+.education-item p {
+    color: #666;
+}
+
+/* Skills Section */
+.skills {
+    background: #fff;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h3 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.skill-item p {
+    color: #555;
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 60px 0;
+    background: #f4f4f4;
+}
+
+.project-item {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    margin-bottom: 5px;
+}
+
+.project-item p {
+    color: #666;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #000000;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.project-link:hover {
+    background: hsl(217, 61%, 28%);
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #666;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+/* Resume Button */
+.resume-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #000000;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.resume-button:hover {
+    background: hsl(217, 61%, 28%);
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 60px 0;
+    background: #f4f4f4;
+}
+
+.certifications-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* General Navigation Styles */
+nav {
+    background: hsl(0, 0%, 8%);
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo Styles */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Hamburger Icon Styles */
+  .hamburger-icon {
+    display: none; /* Hide by default */
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Navigation Links Styles */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Spacing between links */
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Mobile View Styles */
+  @media (max-width: 768px) {
+    .logo-container {
+      display: none; /* Hide the logo on mobile */
+    }
+  
+    .hamburger-icon {
+      display: block; /* Show the hamburger icon only on mobile */
+    }
+  
+    nav ul {
+      display: none; /* Hide the navigation links by default on mobile */
+      flex-direction: column;
+      background: hsl(0, 0%, 8%);
+      position: absolute;
+      top: 60px; /* Adjust based on nav height */
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    nav ul.active {
+      display: flex; /* Show the navigation links when active */
+    }
+  
+    nav ul li {
+      margin: 10px 0; /* Spacing between links in mobile view */
+    }
+  }
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1.logo {
+        font-size: 36px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .skills-list {
+        flex-direction: column;
+    }
+
+    .skill-item {
+        flex: 1 1 100%;
+    }
+}
+/* Sticky Navbar */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Project Description Style */
+.project-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+
+
+/* Navigation Bar */
+nav {
+  height: 60px;
+  background-color: #000000; /* Changed to solid black */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Mobile View Styles */
+@media (max-width: 768px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    height: 100vh;
+    background-color: #000000; /* Changed to solid black */
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+}
+
+/* General Navigation Styles */
+nav {
+  background: #000000; /* Changed to solid black */
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .open-sidebar-button svg,
+  .close-sidebar-button svg {
+    fill: white !important;
+  }
+}
+
+.open-sidebar-button svg,
+.close-sidebar-button svg {
+  fill: white;
+}
+
+
+/* Add this new rule for mobile logo container */
+.mobile-logo-container {
+  display: none; /* Hidden by default, shown only on mobile */
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+
